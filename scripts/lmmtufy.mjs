@@ -27,7 +27,9 @@ function _runMacro(macro){
 }
 
 export function runMacroAs(player, macro){
-  let playerId = game.users.getName(player).id;
-  lmmtufy_socket.executeAsUser("_runMacro", playerId, macro);
+  if (game.user.isGM){
+    let playerId = game.users.getName(player).id;
+    lmmtufy_socket.executeAsUser("_runMacro", playerId, macro);
+  }
 }
 window.runMacroAs = runMacroAs;
