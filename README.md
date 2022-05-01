@@ -32,8 +32,7 @@ console.log("Did this on ", game.user.name);
 ``` 
 Remember to mark both macros as "Script" in the drop down box.
 To run the macro on another player's machine, you need to open the "Macros Directory" (click the folder icon next to the macro hotbar).
-In that directory/folder right click your "messup" macro select "Configure Permissions" (see encircled in the image below). Give all players observer rights to this macro.
-![image](https://user-images.githubusercontent.com/8543541/166147984-201111c1-ecad-429f-96b2-9aca75a545e6.png)
+In that directory/folder right-click your "messup" macro select "Configure Permissions". Give all players observer rights to this macro.
 
 
 Do you like this module?; then please support me at [Patreon](https://www.patreon.com/drO_o).
