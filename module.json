@@ -1,0 +1,28 @@
+{
+    "name": "lmmtufy",
+    "title": "Let Me Mess That Up For You",
+    "description": "Lets you run a macro ",
+    "version": "0.1.0",
+    "minimumCoreVersion": "9",
+    "compatibleCoreVersion": "9",
+    "author": "o_Ove",
+	  "authors": [{
+      "name": "o_Ove",
+      "discord": "Ove#4315",
+      "patreon": "https://www.patreon.com/drO_o"
+    }],
+    "dependencies":[
+        {"name":"socketlib"}
+    ],
+    "socket": true,
+    "esmodules": ["./scripts/lmmtufy.mjs"],    
+    "url": "https://github.com/oOve/lmmtufy",
+    "download": "https://github.com/oOve/lmmtufy/archive/0.1.0.zip",
+    "manifest": "https://github.com/oOve/lmmtufy/releases/latest/download/module.json",
+
+    "license": "LICENSE",
+    "readme": "README.md",
+    "styles":[],
+    "packs": [],    
+    "library": false
+  }
