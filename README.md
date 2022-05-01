@@ -1,42 +1,39 @@
-# foundry_pushable
-Pushable tokens for FoundryVTT.
+# Let Me Mess That Up For You
+Execute macro on a given player's client.
+Introduces the function:
+```JS
+runMacroAs("PlayerName", "macro name");
+```
+I won't register this tiny, and almost useless module in the official foundry registry. If you wish to install it, use the following manifest: 
+https://github.com/oOve/lmmtufy/releases/latest/download/module.json
 
-System agnostic.
-To set up, install the manifest below (or use the default Foundry installer), add some tokens, edit them (1) and mark them as pushable(2) and/or pullable(3).
+So, what can you do with this?
 
-![image](https://user-images.githubusercontent.com/8543541/160937714-1cc164bb-ee06-4bb7-a6c5-78081b15a387.png)
+You can, for example, modify the token image that one of your players see:
+![ezgif-4-8d028bcc63](https://user-images.githubusercontent.com/8543541/166147806-98304729-8473-4d36-a1ef-316b7ac11075.gif)
 
-Install manually by adding the module manifest:
+But, the possibilities are endless.
 
-https://github.com/oOve/pushable/releases/latest/download/module.json
+## Changing the token image for one of your players:
+Create two macros as DM. I've named them "mess him up" and "messup".
+In the first we add the code:
+```JS
+await runMacroAs("Player2", "messup");          // Run the macro called "messup" on another player's client
+let tk = canvas.tokens.get('UqXGF2EAzlj2Myhf'); // Get the token in question and 
+tk.document.update({'x':tk.data.x+1});          // Lets move it a bit to force an update
+```
+In the second macro (called "messup") we add:
+```JS
+let tk = canvas.tokens.get('UqXGF2EAzlj2Myhf');  // The ID of the token we want to edit
+tk.document.data.img = 'creatures/mimic.png';    // Set its image path to our new image
+tk.data.img = 'creatures/mimic.png';             // Again
+await tk.draw();                                 // Draw forces the token to reload its image
+console.log("Did this on ", game.user.name);
+``` 
+Remember to mark both macros as "Script" in the drop down box. Both of these macros use the **ID** of a specific token, you'll need to replace this with the id of your token that should its image changed. To do this, select the token, press F12, and in the console below write ```_token.id``` . 
+To run the macro on another player's machine, you need to open the "Macros Directory" (click the folder icon next to the macro hotbar).
+In that directory/folder right-click your "messup" macro select "Configure Permissions". Give all players observer rights to this macro.
 
-Version 1.1.1, 
-* tokens can now also be pulled. Default key for this is P. Hold down P, and move away from a token.
-* Mark tokens individually as pushable, and/or pullable 
-* Configure Settings:
-  * "Enable pull as well", enables pulling of tokens, tokens must individually be marked as pullable.
-  * "Maximum pushed tokens" set the number of tokens that can be maximum pushed and pulled. Set to -1 if there is no limit.
-* Configure Controls:
-  * The key that enables pulling
-
-## Localization
-Current support for:
-* English
-* Brazilian Portuguese
-* German
-
-If you want to translate this module, download [this file](lang/en.json) and translate it. After that open an issue sharing your translation. Also share the default name convention for your language. You can find that by either, finding a system or module that is already translated to your language and open its module.json. It should look something like this:
-`
-"languages": [
-      {
-        "lang": "en",
-        "name": "English",
-        "path": "lang/en.json"
-      }
-`
-
-## Demo:
-[![Sokoban puzzle using pushable tokens](http://img.youtube.com/vi/FOMEqN03SUU/0.jpg)](http://www.youtube.com/watch?v=FOMEqN03SUU "Sokoban video puzzle")
 
 Do you like this module?; then please support me at [Patreon](https://www.patreon.com/drO_o).
 
