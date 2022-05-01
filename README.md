@@ -4,6 +4,8 @@ Introduces the function:
 ```JS
 runMacroAs("PlayerName", "macro name");
 ```
+I won't register this tiny, and almost useless module in the official foundry registry. If you wish to install it, use the following manifest: 
+https://github.com/oOve/lmmtufy/releases/latest/download/module.json
 
 So, what can you do with this?
 
