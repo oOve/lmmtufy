@@ -2,7 +2,7 @@
     "name": "lmmtufy",
     "title": "Let Me Mess That Up For You",
     "description": "Lets you run a macro ",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "author": "o_Ove",
@@ -17,7 +17,7 @@
     "socket": true,
     "esmodules": ["./scripts/lmmtufy.mjs"],    
     "url": "https://github.com/oOve/lmmtufy",
-    "download": "https://github.com/oOve/lmmtufy/archive/0.1.1.zip",
+    "download": "https://github.com/oOve/lmmtufy/archive/0.1.2.zip",
     "manifest": "https://github.com/oOve/lmmtufy/releases/latest/download/module.json",
 
     "license": "LICENSE",
