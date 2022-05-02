@@ -9,6 +9,8 @@ You can also send parameters along to the macro, and wait for a return value fro
 console.log( await runMacroAs("PlayerName", "macro name", arg1, arg2, arg3 ) );
 ```
 
+If you wonder if this will now allow anyone to execute anything on anyones client, then no, the clients will only execute code with a GM as author.
+
 I won't register this tiny, and almost useless module in the official foundry registry. If you wish to install it, use the following manifest: 
 https://github.com/oOve/lmmtufy/releases/latest/download/module.json
 
