@@ -23,7 +23,13 @@ Hooks.once("socketlib.ready", () => {
 
 function _runMacro(macro){
     let m = game.macros.getName(macro);
-    m.execute();
+    let author_id = m.data.author;
+    if (game.users.get(author_id)?.isGM){
+      m.execute();
+    }
+    else{
+      console.error("Player tried to execute non-gm macro on your client!")
+    }
 }
 
 export function runMacroAs(player, macro){
