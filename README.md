@@ -4,6 +4,11 @@ Introduces the function:
 ```JS
 runMacroAs("PlayerName", "macro name");
 ```
+You can also send parameters along to the macro, and wait for a return value from the macro executed on the remote client.
+```JS
+console.log( await runMacroAs("PlayerName", "macro name", arg1, arg2, arg3 ) );
+```
+
 I won't register this tiny, and almost useless module in the official foundry registry. If you wish to install it, use the following manifest: 
 https://github.com/oOve/lmmtufy/releases/latest/download/module.json
 
