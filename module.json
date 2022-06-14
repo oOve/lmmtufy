@@ -12,7 +12,8 @@
       "patreon": "https://www.patreon.com/drO_o"
     }],
     "dependencies":[
-        {"name":"socketlib"}
+        {"name":"socketlib",
+         "type": "module"}
     ],
     "socket": true,
     "esmodules": ["./scripts/lmmtufy.mjs"],    
