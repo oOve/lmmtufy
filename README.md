@@ -37,7 +37,7 @@ tk.data.img = 'creatures/mimic.png';             // Again
 await tk.draw();                                 // Draw forces the token to reload its image
 console.log("Did this on ", game.user.name);
 ``` 
-Remember to mark both macros as "Script" in the drop down box. Both of these macros use the **ID** of a specific token, you'll need to replace this with the id of your token that should its image changed. To do this, select the token, press F12, and in the console below write ```_token.id``` . 
+Remember to mark both macros as "Script" in the drop down box. Both of these macros use the **ID** of a specific token(here UqXGF2EAzlj2Myhf), you'll need to replace this with the id of your token that should its image changed. To do this, select the token, press F12, and in the console below write ```_token.id``` . 
 To run the macro on another player's machine, you need to open the "Macros Directory" (click the folder icon next to the macro hotbar).
 In that directory/folder right-click your "messup" macro select "Configure Permissions". Give all players observer rights to this macro.
 
